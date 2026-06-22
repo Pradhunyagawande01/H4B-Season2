@@ -4,7 +4,7 @@ import React from "react";
 export default function HeroSection() {
   return (
     // Main Wrapper - Full height, hides overflow, relative for absolute children
-    <section className="relative w-full h-screen  overflow-hidden bg-[#f4f4f4] font-sans">
+    <section className="relative w-full h-screen sm:h-svh  overflow-hidden bg-[#f4f4f4] font-sans">
       {/* 
         ========================================
         1. PARALLAX BACKGROUND LAYER
