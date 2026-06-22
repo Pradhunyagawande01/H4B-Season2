@@ -1,219 +1,40 @@
-{
-  "name": "hb2-test",
-  "path": "d:\\Assam\\hb2-test",
-  "type": "directory",
-  "children": [
-    {
-      "name": "public",
-      "type": "folder",
-      "icon": "📁",
-      "children": [
-        {
-          "name": "Fonts",
-          "type": "folder",
-          "icon": "📁",
-          "children": [
-            {
-              "name": "Luna.otf",
-              "type": "file",
-              "icon": "📄"
-            }
-          ]
-        },
-        {
-          "name": "Aboutl.png",
-          "type": "file",
-          "icon": "🖼️"
-        },
-        {
-          "name": "Aboutm.png",
-          "type": "file",
-          "icon": "🖼️"
-        },
-        {
-          "name": "Aboutr.png",
-          "type": "file",
-          "icon": "🖼️"
-        },
-        {
-          "name": "Buttom.jpg",
-          "type": "file",
-          "icon": "🖼️"
-        },
-        {
-          "name": "Buttom1.jpg",
-          "type": "file",
-          "icon": "🖼️"
-        },
-        {
-          "name": "Logo.png",
-          "type": "file",
-          "icon": "🖼️"
-        },
-        {
-          "name": "landingbg.png",
-          "type": "file",
-          "icon": "🖼️"
-        },
-        {
-          "name": "landingmap.png",
-          "type": "file",
-          "icon": "🖼️"
-        }
-      ]
-    },
-    {
-      "name": "src",
-      "type": "folder",
-      "icon": "📁",
-      "children": [
-        {
-          "name": "components",
-          "type": "folder",
-          "icon": "📁",
-          "children": [
-            {
-              "name": "LinkedInWall",
-              "type": "folder",
-              "icon": "📁",
-              "children": [
-                {
-                  "name": "BigPhoto.jsx",
-                  "type": "file",
-                  "icon": "⚛️"
-                },
-                {
-                  "name": "CalloutBox.jsx",
-                  "type": "file",
-                  "icon": "⚛️"
-                },
-                {
-                  "name": "CutCornerBox.jsx",
-                  "type": "file",
-                  "icon": "⚛️"
-                },
-                {
-                  "name": "LinkedInBadge.jsx",
-                  "type": "file",
-                  "icon": "⚛️"
-                },
-                {
-                  "name": "LinkedInCard.jsx",
-                  "type": "file",
-                  "icon": "⚛️"
-                },
-                {
-                  "name": "constants.js",
-                  "type": "file",
-                  "icon": "📜"
-                },
-                {
-                  "name": "index.jsx",
-                  "type": "file",
-                  "icon": "⚛️"
-                }
-              ]
-            },
-            {
-              "name": "About.jsx",
-              "type": "file",
-              "icon": "⚛️"
-            },
-            {
-              "name": "Botum.jsx",
-              "type": "file",
-              "icon": "⚛️"
-            },
-            {
-              "name": "Footer.jsx",
-              "type": "file",
-              "icon": "⚛️"
-            },
-            {
-              "name": "Landing.jsx",
-              "type": "file",
-              "icon": "⚛️"
-            },
-            {
-              "name": "Linkedin.jsx",
-              "type": "file",
-              "icon": "⚛️"
-            },
-            {
-              "name": "Partners.jsx",
-              "type": "file",
-              "icon": "⚛️"
-            },
-            {
-              "name": "Projects.jsx",
-              "type": "file",
-              "icon": "⚛️"
-            }
-          ]
-        },
-        {
-          "name": "App.css",
-          "type": "file",
-          "icon": "🎨"
-        },
-        {
-          "name": "App.jsx",
-          "type": "file",
-          "icon": "⚛️"
-        },
-        {
-          "name": "index.css",
-          "type": "file",
-          "icon": "🎨"
-        },
-        {
-          "name": "main.jsx",
-          "type": "file",
-          "icon": "⚛️"
-        }
-      ]
-    },
-    {
-      "name": ".gitignore",
-      "type": "file",
-      "icon": "📁"
-    },
-    {
-      "name": "README.md",
-      "type": "file",
-      "icon": "📝"
-    },
-    {
-      "name": "eslint.config.js",
-      "type": "file",
-      "icon": "📜"
-    },
-    {
-      "name": "index.html",
-      "type": "file",
-      "icon": "🌐"
-    },
-    {
-      "name": "package-lock.json",
-      "type": "file",
-      "icon": "⚙️"
-    },
-    {
-      "name": "package.json",
-      "type": "file",
-      "icon": "📦"
-    },
-    {
-      "name": "vite.config.js",
-      "type": "file",
-      "icon": "📜"
-    }
-  ],
-  "metadata": {
-    "generated": "2026-06-22T13:08:24.253Z",
-    "generator": "FileTree Pro Extension",
-    "version": "0.2.0",
-    "showIcons": true,
-    "maxDepth": 10
-  }
-}
+
+├── 📁 public
+│   ├── 📁 Fonts
+│   │   └── 📄 Luna.otf
+│   ├── 🖼️ Aboutl.png
+│   ├── 🖼️ Aboutm.png
+│   ├── 🖼️ Aboutr.png
+│   ├── 🖼️ Buttom.jpg
+│   ├── 🖼️ Buttom1.jpg
+│   ├── 🖼️ Logo.png
+│   ├── 🖼️ landingbg.png
+│   └── 🖼️ landingmap.png
+├── 📁 src
+│   ├── 📁 components
+│   │   ├── 📁 LinkedInWall
+│   │   │   ├── 📄 BigPhoto.jsx
+│   │   │   ├── 📄 CalloutBox.jsx
+│   │   │   ├── 📄 CutCornerBox.jsx
+│   │   │   ├── 📄 LinkedInBadge.jsx
+│   │   │   ├── 📄 LinkedInCard.jsx
+│   │   │   ├── 📄 constants.js
+│   │   │   └── 📄 index.jsx
+│   │   ├── 📄 About.jsx
+│   │   ├── 📄 Botum.jsx
+│   │   ├── 📄 Footer.jsx
+│   │   ├── 📄 Landing.jsx
+│   │   ├── 📄 Linkedin.jsx
+│   │   ├── 📄 Partners.jsx
+│   │   └── 📄 Projects.jsx
+│   ├── 🎨 App.css
+│   ├── 📄 App.jsx
+│   ├── 🎨 index.css
+│   └── 📄 main.jsx
+├── ⚙️ .gitignore
+├── 📝 README.md
+├── 📄 eslint.config.js
+├── 🌐 index.html
+├── ⚙️ package-lock.json
+├── ⚙️ package.json
+└── 📄 vite.config.js
