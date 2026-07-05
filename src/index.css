@@ -1,3 +1,15 @@
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  
+}
 @import "tailwindcss";
 
 body {
@@ -8,7 +20,7 @@ body {
 
 @font-face {
   font-family: "MyCustomFont";
-  src: url(../public/Fonts/Luna.otf) format("opentype");
+  src: url(../public/Fonts/Luna.otf);
 }
 
 .title {
