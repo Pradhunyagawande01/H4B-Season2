@@ -1,5 +1,7 @@
 // src/components/WhoAreWeSection.jsx
 
+import { Link } from "react-router-dom";
+
 function GalleryCard({
   img,
   title,
@@ -88,17 +90,17 @@ export default function WhoAreWeSection() {
 
           {/* Button (bottom-right on desktop, centered on mobile) */}
           <div className="md:col-span-4 md:col-start-9 md:row-start-2 md:self-end flex justify-center md:justify-end">
-            <a
-              href="#gallery"
-              className="bg-[#3B4421] text-white uppercase tracking-wider text
-                 px-6 sm:px-8 lg:px-10 
-                 py-4 sm:py-5 
-                 text-[14px] sm:text-[15px] lg:text-[16px] 
-                 inline-flex items-center justify-center
-                 [clip-path:polygon(18px_0,100%_0,100%_100%,0_100%,0_18px)]"
+            <Link
+              to="/gallery"
+              className="bg-[#3B4421] text-white uppercase tracking-wider
+             px-6 sm:px-8 lg:px-10
+             py-4 sm:py-5
+             text-[14px] sm:text-[15px] lg:text-[16px]
+             inline-flex items-center justify-center
+             [clip-path:polygon(18px_0,100%_0,100%_100%,0_100%,0_18px)]"
             >
               VIEW&nbsp;&nbsp;OUR&nbsp;GALLERY
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-spring/parallax": "^10.1.2",
+    "@react-spring/web": "^10.1.2",
     "@tailwindcss/vite": "^4.2.4",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.21.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-router-dom": "^7.18.1",
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {

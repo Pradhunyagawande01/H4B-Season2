@@ -1,16 +1,18 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Landing from "./components/Landing";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Partners from "./components/Partners";
-import Linkedin from "./components/Linkedin";
+import LinkedInWallSection from "./components/LinkedInWall";
 import Botum from "./components/Botum";
 import Footer from "./components/Footer";
-import LinkedInWallSection from "./components/LinkedInWall";
 
-const App = () => {
+import Gallery from "./page/Gallery";
+
+function Home() {
   return (
-    <div>
+    <>
       <Landing />
       <About />
       <Projects />
@@ -18,7 +20,16 @@ const App = () => {
       <LinkedInWallSection />
       <Botum />
       <Footer />
-    </div>
+    </>
+  );
+}
+
+const App = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/gallery" element={<Gallery />} />
+    </Routes>
   );
 };
 
