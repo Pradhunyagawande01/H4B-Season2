@@ -1,9 +1,19 @@
 // src/components/ProjectsSection.jsx
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-function ProjectCard({ img, title, subtitle, dark = false }) {
+function ProjectCard({ img, title, subtitle, dark = false, projectId }) {
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate(`/projects#${projectId}`);
+  };
+
   return (
-    <div>
+    <div 
+      onClick={handleCardClick}
+      className="cursor-pointer transition-transform hover:scale-105"
+    >
       <div
         className={[
           "w-full border border-black/20",
@@ -34,14 +44,14 @@ function ProjectCard({ img, title, subtitle, dark = false }) {
 
 export default function ProjectsSection() {
   return (
-    <section className="bg-white">
-      <div className="mx-auto max-w-[1500px] px-6 ">
+    <section className="bg-white py-16">
+      <div className="mx-auto max-w-[1500px] px-6">
         {/* Heading */}
         <div>
-          <h2 className="text-[#3B4421] font-extrabold title uppercase leading-[0.95] tracking-wide text-[30px] md:text-[20px] lg:text-[50px]">
+          <h2 className="text-[#3B4421] font-extrabold title uppercase leading-[0.95] tracking-wide text-[30px] md:text-[40px] lg:text-[50px]">
             PROJECTS
           </h2>
-          <p className="mt-4 text-black uppercase tracking-wide text-[20px] md:text-[10px] lg:text-[20px] text">
+          <p className="mt-4 text-black uppercase tracking-wide text-[14px] md:text-[16px] lg:text-[20px] text">
             FROM INNOVATION TO GLOBAL RECOGNITION
           </p>
         </div>
@@ -52,29 +62,31 @@ export default function ProjectsSection() {
             img="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
             title="MICROSOFT"
             subtitle="SERVICE BASED PLATFORM"
+            projectId="microsoft"
           />
           <ProjectCard
             img="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
             title="GOOGLE"
             subtitle="SERVICE BASED PLATFORM"
-            dark
+            projectId="google"
           />
           <ProjectCard
             img="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
             title="FACEBOOK"
             subtitle="SERVICE BASED PLATFORM"
+            projectId="facebook"
           />
         </div>
 
         {/* Button */}
         <div className="mt-16">
-          <a
-            href="#projects"
+          <Link
+            to="/projects"
             className="bg-[#3B4421] text-white uppercase tracking-wider px-10 py-5 text-[16px] inline-flex items-center justify-center
-                       text [clip-path:polygon(18px_0,100%_0,100%_100%,0_100%,0_18px)]"
+                       text hover:bg-[#4a5529] transition-colors [clip-path:polygon(18px_0,100%_0,100%_100%,0_100%,0_18px)]"
           >
             VIEW&nbsp;&nbsp;OUR&nbsp;PROJECTS
-          </a>
+          </Link>
         </div>
       </div>
     </section>

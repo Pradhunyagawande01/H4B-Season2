@@ -9,13 +9,14 @@ import Botum from "./components/Botum";
 import Footer from "./components/Footer";
 
 import Gallery from "./page/Gallery";
+import ProjectDetails from "./page/ProjectPage";
 
 function Home() {
   return (
     <>
       <Landing />
       <About />
-      <Projects />
+      {/* <Projects /> */}
       <Partners />
       <LinkedInWallSection />
       <Botum />
@@ -29,6 +30,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/gallery" element={<Gallery />} />
+      <Route path="/projects" element={<ProjectDetails />} />
     </Routes>
   );
 };
