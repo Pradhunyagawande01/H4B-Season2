@@ -62,19 +62,19 @@ export default function HeroSection() {
 
         {/* Info Box */}
         <div className="pointer-events-auto w-full px-4">
-          <div className="bg-[#2a2d24] text-white p-3">
+          <div className="bg-[#383F21] text-white p-3">
             <h3 className="text-[10px] font-bold uppercase tracking-wider">
-              Northeast India's Biggest 24-Hour Hackathon
+              Northeast india’s biggest hackathon community
             </h3>
           </div>
 
           <div className="bg-white/80 backdrop-blur-md border border-[#2a2d24] border-t-0 p-4 w-full">
             <ul className="space-y-3">
               {[
-                "1st Major League Hacking Event of Northeast India",
-                "Supported by DPIIT Startup India",
-                "Supported by SAVUJ",
-                "Highest Number of Participants Registered",
+                "Hack4brahmaputra, Northeast india’s biggest hackathon ",
+                "1st major league hacking event of northeast india",
+                "supported by dpiit startup india & sayuj",
+                "highest number of participants registered",
               ].map((item, i) => (
                 <li key={i} className="flex gap-2">
                   <span>→</span>
@@ -167,18 +167,18 @@ export default function HeroSection() {
           {/* Info Box */}
           <div className="absolute bottom-32 right-0 md:bottom-12 md:right-12 pointer-events-auto overflow-auto">
           {/* Box Header */}
-          <div className="bg-[#2a2d24] text-white p-3 border border-[#2a2d24]">
+          <div className="bg-[#383F21] text-white p-3 border border-[#2a2d24]">
             <h3 className="text-xs md:text-sm font-bold uppercase tracking-wider subtitle">
-              Northeast India's Biggest 24-Hour Hackathon
+              Northeast india’s biggest hackathon community
             </h3>
           </div>
             <div className="bg-white/70 backdrop-blur-md border border-t-0 border-[#2a2d24] p-4">
               <ul className="space-y-3 text">
                 {[
-                  "1st Major League Hacking Event of Northeast India",
-                  "Supported by DPIIT Startup India",
-                  "Supported by SAVUJ",
-                  "Highest Number of Participants Registered",
+                  "Hack4brahmaputra, Northeast india’s biggest hackathon ",
+                "1st major league hacking event of northeast india",
+                "supported by dpiit startup india & sayuj",
+                "highest number of participants registered",
                 ].map((text, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="text-[#2a2d24] text-sm leading-none mt-0.5">

@@ -182,8 +182,13 @@ const season1Partners = [
   },
   {
     name: "ar.io",
-    logo: "/partners/p13.svg",
+    logo: "/partners/p13.png",
   },
+  {
+    name: "ar.io",
+    logo: "/partners/p14.png",
+  },
+
 ];
 
 export default function PartnersSection() {
@@ -208,10 +213,10 @@ export default function PartnersSection() {
         <div className="mx-auto max-w-[1500px] px-4 sm:px-6 mb-10 md:mb-12">
           <div className="text-right">
             <h2 className="text-[#3B4421] font-extrabold uppercase leading-[0.95] tracking-wide text-[28px] sm:text-[36px] md:text-[44px] lg:text-[50px] title">
-              SEASON 1 PARTNERS
+              our PARTNERS
             </h2>
             <p className="mt-3 md:mt-4 text-black/70 uppercase tracking-wider text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-medium text">
-              SUPPORTERS WHO MADE OUR FIRST SEASON POSSIBLE
+              Support and collaborators on our journey
             </p>
           </div>
         </div>

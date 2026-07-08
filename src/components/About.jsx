@@ -50,14 +50,7 @@ export default function WhoAreWeSection() {
 
         {/* Paragraph */}
         <p className="mx-auto mt-3.5 lg:ml-52 text-black text-[20px] md:text-[10px] lg:text-[20px] leading-relaxed text ">
-          Hack4Brahma is Northeast India's biggest hackathon. Season 1 took
-          place in Guwahati, Assam, in October 2025. It was the region's first
-          hackathon recognized by Major League Hacking (MLH). The event received
-          support from DPIIT Startup India and Sayuj (STPI). Over 4,000+
-          developers registered from across India. It earned widespread praise
-          and marked a major success. Season 2 returns even bigger on September
-          26-27, 2026. This edition will further boost Northeast India's tech
-          ecosystem. Northeast Rising!
+          Hack4Brahma, Northeast India’s biggest hackathon community. Our first hackathon, "Hack4Brahmaputra," became Northeast India's largest hackathon. It was supported by Startup India, SAYUJ (STPI), and Major League Hacking (MLH), and took place on October 10–11, 2025, in Guwahati, Assam.We have organized 15+ webinars and sessions in various cities across India. We are currently running a series of mini-hackathons called Hack Days; so far, we have held events in Nagpur, Guwahati, Patna, Nashik, and Nagaland. Upcoming cities include Bhopal, Pune, and more.Our vision and mission are to provide a platform and ecosystem for students from the Northeast and other Tier-3 cities in India where they can learn, collaborate, and showcase their skills.
         </p>
 
         {/* Gallery layout */}
@@ -67,14 +60,14 @@ export default function WhoAreWeSection() {
             className="md:col-span-4 md:row-start-1"
             img="../Aboutl.png"
             title="HACK DAYS NAGPUR"
-            subtitle="EVENT"
+            subtitle="HACKATHON"
           />
 
           {/* Middle (large, taller, spans 2 rows) */}
           <GalleryCard
             className="md:col-span-4 md:col-start-5 md:row-start-1 md:row-span-2"
             img="../Aboutm.png"
-            title="HACK 4 BRAHMA."
+            title="HACK 4 BRAHMAputra"
             subtitle="HACKATHON"
             large
             grayscale
@@ -84,7 +77,7 @@ export default function WhoAreWeSection() {
           <GalleryCard
             className="md:col-span-4 md:col-start-9 md:row-start-1"
             img="../Aboutr.png"
-            title="WORKSHOP"
+            title="HACK DAYS Guwahati"
             subtitle="HACKATHON"
           />
 
