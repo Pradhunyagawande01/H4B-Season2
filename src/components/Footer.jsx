@@ -22,7 +22,7 @@ export default function Footer() {
         </svg>
       ),
       label: "LINKEDIN.COM/HACK4BRAHMA",
-      href: "https://linkedin.com/hack4brahma",
+      href: "https://www.linkedin.com/company/hack4brahma/?viewAsMember=true",
     },
     {
       icon: (
