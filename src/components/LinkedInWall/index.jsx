@@ -7,8 +7,8 @@ import { OLIVE } from "./constants";
 export default function LinkedInWallSection() {
   const cards = [
     {
-      avatar: "/Shuhangi.png",
-      name: "Shubhangi Gupta, Github",
+      avatar: "/Swati.png",
+      name: "Swati Awasthi",
       text: "Hack4Brahma was an incredible experience that perfectly blended innovation, collaboration, and learning. The well-organized event, supportive mentors, and passionate community made every moment of the 24-hour hackathon worthwhile. It's more than just a competition—it's a platform that inspires growth, teamwork, and impactful ideas.",
       className: "lg:col-span-4 lg:col-start-1 lg:row-start-1"
     },
@@ -26,8 +26,8 @@ export default function LinkedInWallSection() {
       className: "lg:col-span-4 lg:col-start-9 lg:row-start-1 lg:row-span-2"
     },
     {
-      avatar: "/Swati.png",
-      name: "Swati Awasthi",
+      avatar: "/Shuhangi.png",
+      name: "Shubhangi Gupta, Github",
       text: "Hack4Brahma in Guwahati was a lovely event. I enjoyed introducing GitHub to students, they were eager and talented. They just needed a chance to show what they can do. Great work building this platform!",
       image: "",
       className: "lg:col-span-6 lg:col-start-7 lg:row-start-3"
@@ -42,7 +42,7 @@ export default function LinkedInWallSection() {
           className="font-extrabold uppercase tracking-wide leading-[0.95] text-[30px] md:text-[20px] lg:text-[50px] title"
           style={{ color: OLIVE }}
         >
-          @HACK4BRAHMA
+          @MENTORS
         </h2>
         <div className="mt-3 text-[#777] uppercase tracking-wide text-[20px] md:text-[10px] lg:text-[20px] text">
           LINKEDIN.COM
