@@ -1,94 +1,196 @@
-// src/components/ProjectsSection.jsx
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+// src/components/EventsSection.jsx
+import React, { useEffect, useRef } from "react";
 
-function ProjectCard({ img, title, subtitle, dark = false, projectId }) {
-  const navigate = useNavigate();
-
+function EventCard({ img, title, linkedinUrl }) {
   const handleCardClick = () => {
-    navigate(`/projects#${projectId}`);
+    if (linkedinUrl) {
+      window.open(linkedinUrl, '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
     <div 
-      onClick={handleCardClick}
-      className="cursor-pointer transition-transform hover:scale-105"
+      onClick={handleCardClick} 
+      className="flex-shrink-0 w-[280px] md:w-[360px] lg:w-[480px] cursor-pointer"
     >
       <div
         className={[
           "w-full border border-black/20",
-          "h-[320px] md:h-[360px] lg:h-[420px]",
+          "aspect-video", // 16:9 aspect ratio
           "flex items-center justify-center overflow-hidden",
-          dark ? "bg-[#3B4421]" : "bg-white",
+          "bg-white",
         ].join(" ")}
       >
-        <img
-          src={img}
-          alt={title}
-          className="max-h-[55%] max-w-[55%] object-contain"
-          loading="lazy"
+        <img 
+          src={img} 
+          alt={title} 
+          className="w-full h-full object-cover" 
+          loading="lazy" 
         />
       </div>
 
       <div className="mt-5">
-        <div className="text-[#3B4421] uppercase tracking-wide leading-none title">
+        <div className="text-[#3B4421] uppercase tracking-wide leading-tight font-bold text-[16px] md:text-[18px] lg:text-[20px]">
           {title}
-        </div>
-        <div className="mt-2 text-[#8A8A8A] uppercase tracking-wide text">
-          {subtitle}
         </div>
       </div>
     </div>
   );
 }
 
-export default function ProjectsSection() {
+export default function EventsSection() {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let scrollInterval;
+    let isPaused = false;
+
+    const startScrolling = () => {
+      scrollInterval = setInterval(() => {
+        if (!isPaused && scrollContainer) {
+          scrollContainer.scrollLeft += 2;
+          
+          // Reset to beginning when reached end for infinite loop
+          if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+            scrollContainer.scrollLeft = 0;
+          }
+        }
+      }, 20);
+    };
+
+    startScrolling();
+
+    // Pause on hover
+    const handleMouseEnter = () => {
+      isPaused = true;
+    };
+
+    const handleMouseLeave = () => {
+      isPaused = false;
+    };
+
+    scrollContainer.addEventListener('mouseenter', handleMouseEnter);
+    scrollContainer.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      clearInterval(scrollInterval);
+      if (scrollContainer) {
+        scrollContainer.removeEventListener('mouseenter', handleMouseEnter);
+        scrollContainer.removeEventListener('mouseleave', handleMouseLeave);
+      }
+    };
+  }, []);
+
+  // Events data - Replace with your actual images and LinkedIn URLs
+  const events = [
+    {
+      id: 1,
+      img: "/events/event1.jpg", // Replace with your image path
+      title: "HackDays",
+      linkedinUrl: "https://www.linkedin.com/posts/your-event-1" // Replace with actual LinkedIn URL
+    },
+    {
+      id: 2,
+      img: "/events/event2.jpg", // Replace with your image path
+      title: "HackDays",
+      linkedinUrl: "https://www.linkedin.com/posts/your-event-2" // Replace with actual LinkedIn URL
+    },
+    {
+      id: 3,
+      img: "/events/event3.jpg", // Replace with your image path
+      title: "HackDays",
+      linkedinUrl: "https://www.linkedin.com/posts/your-event-3" // Replace with actual LinkedIn URL
+    },
+    {
+      id: 4,
+      img: "/events/event4.jpg", // Replace with your image path
+      title: "HackDays",
+      linkedinUrl: "https://www.linkedin.com/posts/your-event-4" // Replace with actual LinkedIn URL
+    },
+    {
+      id: 5,
+      img: "/events/event5.jpg", // Replace with your image path
+      title: "HackDays",
+      linkedinUrl: "https://www.linkedin.com/posts/your-event-5" // Replace with actual LinkedIn URL
+    },
+    {
+      id: 6,
+      img: "/events/event6.jpg", // Replace with your image path
+      title: "HackDays",
+      linkedinUrl: "https://www.linkedin.com/posts/your-event-6" // Replace with actual LinkedIn URL
+    },
+    {
+      id: 7,
+      img: "/events/event7.jpg", // Replace with your image path
+      title: "HackDays",
+      linkedinUrl: "https://www.linkedin.com/posts/your-event-7" // Replace with actual LinkedIn URL
+    },
+    {
+      id: 8,
+      img: "/events/event8.jpg", // Replace with your image path
+      title: "HackDays",
+      linkedinUrl: "https://www.linkedin.com/posts/your-event-8" // Replace with actual LinkedIn URL
+    },
+  ];
+
+  // Duplicate events for seamless infinite scroll
+  const duplicatedEvents = [...events, ...events, ...events, ...events];
+
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-16 overflow-hidden">
       <div className="mx-auto max-w-[1500px] px-6">
         {/* Heading */}
         <div>
-          <h2 className="text-[#3B4421] font-extrabold title uppercase leading-[0.95] tracking-wide text-[30px] md:text-[40px] lg:text-[50px]">
-            PROJECTS
+          <h2 className="text-[#3B4421] title font-extrabold uppercase leading-[0.95] tracking-wide text-[30px] md:text-[40px] lg:text-[50px]">
+            OUR EVENTS
           </h2>
-          <p className="mt-4 text-black uppercase tracking-wide text-[14px] md:text-[16px] lg:text-[20px] text">
-            FROM INNOVATION TO GLOBAL RECOGNITION
+          <p className="mt-4 text-[#3B4421] uppercase tracking-wide text-[14px] md:text-[16px] lg:text-[20px] subtitle">
+            CELEBRATING OUR COMMUNITY MILESTONES
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
-          <ProjectCard
-            img="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
-            title="MICROSOFT"
-            subtitle="SERVICE BASED PLATFORM"
-            projectId="microsoft"
-          />
-          <ProjectCard
-            img="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
-            title="GOOGLE"
-            subtitle="SERVICE BASED PLATFORM"
-            projectId="google"
-          />
-          <ProjectCard
-            img="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-            title="FACEBOOK"
-            subtitle="SERVICE BASED PLATFORM"
-            projectId="facebook"
-          />
+        {/* Carousel */}
+        <div className="mt-16 relative">
+          <div 
+            ref={scrollRef}
+            className="flex gap-8 overflow-x-auto scrollbar-hide scroll-smooth"
+            style={{ 
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+              WebkitOverflowScrolling: 'touch'
+            }}
+          >
+            {duplicatedEvents.map((event, index) => (
+              <EventCard
+                key={`${event.id}-${index}`}
+                img={event.img}
+                title={event.title}
+                linkedinUrl={event.linkedinUrl}
+              />
+            ))}
+          </div>
+          
+          {/* Gradient Overlays */}
+          <div className="absolute top-0 left-0 h-full w-20 bg-gradient-to-r from-white to-transparent pointer-events-none hidden md:block" />
+          <div className="absolute top-0 right-0 h-full w-20 bg-gradient-to-l from-white to-transparent pointer-events-none hidden md:block" />
         </div>
 
-        {/* Button */}
-        <div className="mt-16">
-          <Link
-            to="/projects"
-            className="bg-[#3B4421] text-white uppercase tracking-wider px-10 py-5 text-[16px] inline-flex items-center justify-center
-                       text hover:bg-[#4a5529] transition-colors [clip-path:polygon(18px_0,100%_0,100%_100%,0_100%,0_18px)]"
-          >
-            VIEW&nbsp;&nbsp;OUR&nbsp;PROJECTS
-          </Link>
-        </div>
+        {/* Event Count */}
+        {/* <div className="mt-16 text-center">
+          <p className="text-[#3B4421] uppercase tracking-wide text-[14px] md:text-[16px] font-semibold">
+            {events.length} EVENTS ORGANIZED
+          </p>
+        </div> */}
       </div>
+
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 }
