@@ -16,7 +16,7 @@ function Home() {
     <>
       <Landing />
       <About />
-      {/* <Projects /> */}
+      <Projects />
       <Partners />
       <LinkedInWallSection />
       <Botum />

@@ -24,15 +24,15 @@ function EventCard({ img, title, linkedinUrl }) {
         <img 
           src={img} 
           alt={title} 
-          className="w-full h-full object-cover" 
+          className="w-full h-full object-fill" 
           loading="lazy" 
         />
       </div>
 
       <div className="mt-5">
-        <div className="text-[#3B4421] uppercase tracking-wide leading-tight font-bold text-[16px] md:text-[18px] lg:text-[20px]">
+        {/* <div className="text-[#3B4421] uppercase tracking-wide leading-tight font-bold text-[16px] md:text-[18px] lg:text-[20px]">
           {title}
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -88,51 +88,45 @@ export default function EventsSection() {
   const events = [
     {
       id: 1,
-      img: "/events/event1.jpg", // Replace with your image path
+      img: "/events/events1.png", // Replace with your image path
       title: "HackDays",
       linkedinUrl: "https://www.linkedin.com/posts/your-event-1" // Replace with actual LinkedIn URL
     },
     {
       id: 2,
-      img: "/events/event2.jpg", // Replace with your image path
+      img: "/events/events2.png", // Replace with your image path
       title: "HackDays",
       linkedinUrl: "https://www.linkedin.com/posts/your-event-2" // Replace with actual LinkedIn URL
     },
     {
       id: 3,
-      img: "/events/event3.jpg", // Replace with your image path
+      img: "/events/events3.png", // Replace with your image path
       title: "HackDays",
       linkedinUrl: "https://www.linkedin.com/posts/your-event-3" // Replace with actual LinkedIn URL
     },
     {
       id: 4,
-      img: "/events/event4.jpg", // Replace with your image path
+      img: "/events/events4.png", // Replace with your image path
       title: "HackDays",
       linkedinUrl: "https://www.linkedin.com/posts/your-event-4" // Replace with actual LinkedIn URL
     },
     {
       id: 5,
-      img: "/events/event5.jpg", // Replace with your image path
+      img: "/events/events5.png", // Replace with your image path
       title: "HackDays",
       linkedinUrl: "https://www.linkedin.com/posts/your-event-5" // Replace with actual LinkedIn URL
     },
     {
       id: 6,
-      img: "/events/event6.jpg", // Replace with your image path
+      img: "/events/events6.png", // Replace with your image path
       title: "HackDays",
       linkedinUrl: "https://www.linkedin.com/posts/your-event-6" // Replace with actual LinkedIn URL
     },
     {
       id: 7,
-      img: "/events/event7.jpg", // Replace with your image path
+      img: "/events/events7.png", // Replace with your image path
       title: "HackDays",
       linkedinUrl: "https://www.linkedin.com/posts/your-event-7" // Replace with actual LinkedIn URL
-    },
-    {
-      id: 8,
-      img: "/events/event8.jpg", // Replace with your image path
-      title: "HackDays",
-      linkedinUrl: "https://www.linkedin.com/posts/your-event-8" // Replace with actual LinkedIn URL
     },
   ];
 
@@ -168,7 +162,7 @@ export default function EventsSection() {
                 key={`${event.id}-${index}`}
                 img={event.img}
                 title={event.title}
-                linkedinUrl={event.linkedinUrl}
+                // linkedinUrl={event.linkedinUrl}
               />
             ))}
           </div>
