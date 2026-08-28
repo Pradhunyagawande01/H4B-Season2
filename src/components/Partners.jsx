@@ -66,7 +66,7 @@ export default function PartnersSection() {
             <h2 className="text-[#3B4421] font-extrabold uppercase leading-[0.95] tracking-wide text-[32px] md:text-[44px] lg:text-[60px] title">
               OUR PARTNERS
             </h2>
-            <p className="mt-4 text-black/70 uppercase tracking-wider text-[14px] md:text-[18px] lg:text-[20px] font-medium text">
+            <p className="mt-4 text-black/70 uppercase tracking-wider text-[14px] md:text-[18px] lg:text-[20px] font-medium subtitle">
               Support and collaborators on our journey
             </p>
           </div>
@@ -86,12 +86,12 @@ export default function PartnersSection() {
                 {duplicatedLine1.map((partner, index) => (
                   <div
                     key={`line1-${index}`}
-                    className="flex items-center justify-center mx-6 md:mx-12 lg:mx-16 h-16 md:h-24 opacity-60 hover:opacity-100 transition-all duration-300"
+                    className="flex items-center justify-center mx-6 md:mx-12 lg:mx-16 h-16 md:h-24 opacity-100 hover:opacity-100 transition-all duration-300"
                   >
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="max-h-full w-auto max-w-[120px] md:max-w-[160px] lg:max-w-[200px] object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                      className="max-h-full w-auto max-w-[120px] md:max-w-[160px] lg:max-w-[200px] object-contain transition-all duration-500"
                       onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=Logo"; }} 
                     />
                   </div>
@@ -105,12 +105,12 @@ export default function PartnersSection() {
                 {duplicatedLine2.map((partner, index) => (
                   <div
                     key={`line2-${index}`}
-                    className="flex items-center justify-center mx-6 md:mx-12 lg:mx-16 h-16 md:h-24 opacity-60 hover:opacity-100 transition-all duration-300"
+                    className="flex items-center justify-center mx-6 md:mx-12 lg:mx-16 h-16 md:h-24 opacity-100 hover:opacity-100 transition-all duration-300"
                   >
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="max-h-full w-auto max-w-[120px] md:max-w-[160px] lg:max-w-[200px] object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                      className="max-h-full w-auto max-w-[120px] md:max-w-[160px] lg:max-w-[200px] object-contain transition-all duration-500"
                       onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=Logo"; }}
                     />
                   </div>
